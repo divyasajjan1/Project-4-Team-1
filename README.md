@@ -1,39 +1,28 @@
 # Project-4-Team-1
 Machine Learning project
 
-**Dataset Terms Explanation**
-This document provides an explanation of the terms used in the dataset related to data science job salaries.
+[Diabetes Dataset](https://www.kaggle.com/code/tumpanjawat/diabetes-eda-random-forest-hp)
 
-work_year: The year in which the salary was paid.
+We are predicting the likelihood of diabetes based on various demographic, health, and lifestyle factors. The dataset includes information such as gender, age, presence of hypertension and heart disease, smoking history, BMI, HbA1c level, and blood glucose level. Our goal is to build a predictive model that accurately classifies individuals as either having or not having diabetes, which can help in early identification and management of the condition.
 
-experience_level: The level of experience in the job during the specified year, categorized as:
-EN: Entry-level / Junior
-MI: Mid-level / Intermediate
-SE: Senior-level / Expert
-EX: Executive-level / Director
+Explanation of Data columns:
+- Gender - refers to the biological sex of the individual, which can have an impact on their susceptibility to diabetes. There are three categories in it male ,female and other.
+- Age - is an important factor as diabetes is more commonly diagnosed in older adults.Age ranges from 0-80 in our dataset.
+- Hypertension - is a medical condition in which the blood pressure in the arteries is persistently elevated. It has values a 0 or 1 where 0 indicates they don’t have hypertension and for 1 it means they have hypertension.
+- Heart disease - is another medical condition that is associated with an increased risk of developing diabetes. It has values a 0 or 1 where 0 indicates they don’t have heart disease and for 1 it means they have heart disease.
+- Smoking history - is also considered a risk factor for diabetes and can exacerbate the complications associated with diabetes.In our dataset we have 5 categories i.e not current,former,No Info,current,never and ever.
+- BMI (Body Mass Index) - is a measure of body fat based on weight and height. Higher BMI values are linked to a higher risk of diabetes. The range of BMI in the dataset is from 10.16 to 71.55. BMI less than 18.5 is underweight, 18.5-24.9 is normal, 25-29.9 is overweight, and 30 or more is obese.
+- HbA1c (Hemoglobin A1c) level - is a measure of a person's average blood sugar level over the past 2-3 months. Higher levels indicate a greater risk of developing diabetes. Mostly more than 6.5% of HbA1c Level indicates diabetes.
+- Blood glucose level - refers to the amount of glucose in the bloodstream at a given time. High blood glucose levels are a key indicator of diabetes.
+- Diabetes - is the target variable being predicted, with values of 1 indicating the presence of diabetes and 0 indicating the absence of diabetes.
 
-employment_type: The type of employment for the role, categorized as:
-PT: Part-time
-FT: Full-time
-CT: Contract
-FL: Freelance
 
-job_title: The specific role or job title held during the year.
+Divya
 
-salary: The total gross salary amount paid.
+Kajal
 
-salary_currency: The currency in which the salary was paid, represented as an ISO 4217 currency code.
+Jessamyn
 
-salaryinusd: The salary amount converted into USD.
+Donal
 
-employee_residence: The primary country of residence of the employee during the work year, represented as an ISO 3166 country code.
-
-remote_ratio: The proportion or percentage of work done remotely.
-
-company_location: The country where the employer's main office or contracting branch is located.
-
-company_size: The median number of people employed by the company during the year.
-
-These terms provide important context for understanding the data collected in the dataset related to data science job salaries. The dataset encompasses various aspects including job roles, experience levels, employment types, salaries, remote work ratios, and company details.
-
-For further analysis and interpretation of the dataset, refer to these defined terms to gain insights into the factors influencing data science job salaries across different regions and employment scenarios.
+Ayo
