@@ -20,13 +20,20 @@ Explanation of Data columns:
 #### Divya
 
 ### Model 1: Logistic Regression
-I used logistic regression because the target variable had values of 0s and 1s. Initially, the model showed 95.78% accuracy. But when I checked the predictions against the actual values, I found that it often labeled positive cases as negative, which isn't right. This misclassification needs fixing to make the predictions more accurate.
+I used logistic regression because the target variable had values of 0s and 1s. Initially, the model showed 95.78% accuracy. But when I checked the predictions against the actual values, I found that it often labeled positive cases as negative, which isn't right. In health, spotting problems early is key. Missing a diagnosis means people won't get the treatment they need, which can make things worse. This misclassification needs fixing to make the predictions more accurate.
+
+By looking at the co-efficients to identify the most important features
+- Features like 'HbA1c_level', 'blood_glucose_level', and 'age' have the largest absolute coefficients, indicating significant influence on the predicted probability of the target class.
+- Positive coefficients for features like 'hypertension', 'heart_disease', and certain smoking history categories suggest that their presence increases the probability of the target class.
+- Negative coefficients for features like 'smoking_history_No Info', 'gender_Other', and 'gender_Female' suggest that their presence decreases the probability of the target class.
 
 In the confusion matrix, the following values were found.
-[[    0 22875]
- [    0  2125]]
+[[22679   196]
+ [  858  1267]]
 
-This confusion matrix suggests that the model has correctly classified all negative instances (TN = 0) but incorrectly classified all positive instances as negative (FP = 22875). It's possible that there may be issues with the data imbalance. In this case, it appears that the model is not effectively distinguishing between the two classes, resulting in a high number of false positives and no true negatives.
+- This confusion matrix suggests that the model has correctly classified the majority of instances as either positive or negative. It has a high number of true positives and true negatives, indicating effective classification performance.
+- However, there are also notable numbers of false positives and false negatives. The presence of false positives (FP = 196) indicates instances incorrectly classified as positive, while false negatives (FN = 858) indicate instances incorrectly classified as negative.
+- The relatively small number of false positives compared to true positives suggests that the model's precision (the proportion of true positive predictions out of all positive predictions) is reasonably high. However, the presence of false negatives indicates that the model may have lower recall (the proportion of true positive predictions out of all actual positives).
 
 Classification report:
 Accuracy: 0.96
@@ -45,6 +52,15 @@ Overall, the model demonstrates high accuracy (96%), but there's room for improv
 Hence I tried another model.
 
 ### Model 2: Random Forest Classifier
+
+In our Random Forest model, we analyzed feature importance to identify the most influential predictors. The feature importance scores indicate the relative importance of each feature in predicting the target variable.
+
+Top 3 features contributing to the target variable diabetes - 
+- blood_glucose_level: This feature has the highest importance score, indicating that it contributes the most to predicting diabetes in the Random Forest model. Elevated blood glucose levels are a key indicator of diabetes and play a central role in diagnosing and managing the condition.
+- HbA1c_level: Hemoglobin A1c (HbA1c) level is another crucial predictor of diabetes. It reflects an individual's average blood sugar levels over the past 2-3 months and is commonly used to diagnose and monitor diabetes. Higher HbA1c levels are associated with poorly controlled diabetes and an increased risk of complications.
+- age: Age is a significant predictor of diabetes risk, with the likelihood of developing the condition increasing with age. Aging is associated with changes in metabolism, hormone levels, and lifestyle factors, all of which can influence diabetes risk.
+
+Understanding their importance can help healthcare professionals prioritize screening, diagnosis, and treatment strategies for individuals at risk of diabetes.
 
 The confusion matrix of Random Forest classification looked much better. 
 	        Predicted 0	Predicted 1
