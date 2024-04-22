@@ -17,12 +17,66 @@ Explanation of Data columns:
 - Diabetes - is the target variable being predicted, with values of 1 indicating the presence of diabetes and 0 indicating the absence of diabetes.
 
 
-Divya
+#### Divya
 
-Kajal
+### Model 1: Logistic Regression
+I used logistic regression because the target variable had values of 0s and 1s. Initially, the model showed 95.78% accuracy. But when I checked the predictions against the actual values, I found that it often labeled positive cases as negative, which isn't right. This misclassification needs fixing to make the predictions more accurate.
 
-Jessamyn
+In the confusion matrix, the following values were found.
+[[    0 22875]
+ [    0  2125]]
 
-Donal
+This confusion matrix suggests that the model has correctly classified all negative instances (TN = 0) but incorrectly classified all positive instances as negative (FP = 22875). It's possible that there may be issues with the data imbalance. In this case, it appears that the model is not effectively distinguishing between the two classes, resulting in a high number of false positives and no true negatives.
 
-Ayo
+Classification report:
+Accuracy: 0.96
+Precision (Class 0): 0.96
+Recall (Class 0): 0.99
+F1-score (Class 0): 0.98
+
+Precision (Class 1): 0.87
+Recall (Class 1): 0.60
+F1-score (Class 1): 0.71
+
+The model performs well in identifying instances without diabetes (class 0), achieving high precision (96%) and recall (99%).
+However, its performance in identifying instances with diabetes (class 1) is less satisfactory, with lower recall (60%) despite reasonable precision (87%).
+Overall, the model demonstrates high accuracy (96%), but there's room for improvement in correctly identifying positive cases (class 1).
+
+Hence I tried another model.
+
+### Model 2: Random Forest Classifier
+
+The confusion matrix of Random Forest classification looked much better. 
+	        Predicted 0	Predicted 1
+Actual 0	    22722	    153
+Actual 1	    740	        1385
+
+The model correctly identified:
+22,722 instances as negative (class 0) and labeled them correctly (True Negatives).
+1,385 instances as positive (class 1) and labeled them correctly (True Positives).
+The model incorrectly classified:
+153 instances as positive (class 1) when they were actually negative (False Positives).
+740 instances as negative (class 0) when they were actually positive (False Negatives).
+
+The accuracy and classification report looked like this.
+
+Accuracy Score : 0.96428
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.97      0.99      0.98     22875
+           1       0.90      0.65      0.76      2125
+
+In summary, the model performs well for class 0, with high precision, recall, and F1-score, indicating accurate classification. However, for class 1, while precision is still relatively high, recall is lower, suggesting that the model struggles to capture all instances of class 1.
+
+The dataset is highly imbalanced which is affecting the prediction, hence tried to set the class weights.
+
+Adjusting the class weights did not help. In some cases class 1 performed a tiny bit better, but class 0 declined a lot. In some cases both declined. So the model without the class weights is the one good for now.
+
+#### Kajal
+
+#### Jessamyn
+
+#### Donal
+
+#### Ayo
