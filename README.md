@@ -75,9 +75,9 @@ Top 3 features contributing to the target variable diabetes -
 Understanding their importance can help healthcare professionals prioritize screening, diagnosis, and treatment strategies for individuals at risk of diabetes.
 
 The confusion matrix of Random Forest classification looked much better. 
-	        Predicted 0	Predicted 1
-Actual 0	    22722	    153
-Actual 1	    740	        1385
+
+[[22722   153]
+ [  740  1385]]	    	        
 
 The model correctly identified:
 22,722 instances as negative (class 0) and labeled them correctly (True Negatives).
@@ -89,11 +89,14 @@ The model incorrectly classified:
 The accuracy and classification report looked like this.
 
 Accuracy Score : 0.96428
-Classification Report
-              precision    recall  f1-score   support
 
-           0       0.97      0.99      0.98     22875
-           1       0.90      0.65      0.76      2125
+Precision (Class 0): 0.97
+Recall (Class 0): 0.99
+F1-score (Class 0): 0.98
+
+Precision (Class 1): 0.90
+Recall (Class 1): 0.65
+F1-score (Class 1): 0.76
 
 In summary, the model performs well for class 0, with high precision, recall, and F1-score, indicating accurate classification. However, for class 1, while precision is still relatively high, recall is lower, suggesting that the model struggles to capture all instances of class 1.
 
