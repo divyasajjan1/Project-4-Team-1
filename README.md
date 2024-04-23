@@ -111,6 +111,15 @@ Adjusting the class weights did not help. In some cases class 1 performed a tiny
 #### Kajal
 
 #### Jessamyn
+Created visualization to showcase the importance of each variable within the dataset and how it correlates to the target variable, diabetes. Visualizing our data not only makes our findings more comprehensible but also offers a clearer understanding of the relationships between variables and their impact on diabetes risk. We've employed various visualization techniques to bring our analysis to life, enabling us to spot trends and patterns, compare variables and enhance interpretation.
+
+Key visualizations to expect:
+1.	Gender Distribution: A pie chart showcasing the distribution of diabetes cases across genders, highlighting any disparities.
+2.	Age vs. Diabetes: A line graph depicting the correlation between age and diabetes risk, with age on the x-axis and diabetes prevalence on the y-axis.
+3.	BMI Distribution: A histogram or box plot illustrating the BMI distribution among individuals with and without diabetes.
+4.	Smoking History Impact: A pie chart or bar graph comparing the diabetes prevalence between smokers and non-smokers.
+5.	Hypertension and Heart Disease: A series of stacked bar charts or heatmaps showcasing the prevalence of diabetes among individuals with varying levels of hypertension and heart disease.
+6.	Blood Glucose and HbA1c Levels: displaying the relationship between blood glucose levels, HbA1c levels, and diabetes risk.
 
 #### Donal
 
