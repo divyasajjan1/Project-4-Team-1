@@ -19,8 +19,16 @@ Explanation of Data columns:
 
 #### Divya
 
+First, found the distribution of the target variable. 91.5% (91500) were 0 (No diabetes) and 8.5% (8500) were 1 (Diabetes) in the target variable. Understood that the dataset is pretty imbalanced.
+
+Converted the categorical columns of 'gender' and 'smoking history' into numerical data using pd.get_dummies().
+
+Scaled the training and testing data using StandardScaler().
+
+Continued to model building using the scaled data.
+
 ### Model 1: Logistic Regression
-I used logistic regression because the target variable had values of 0s and 1s. Initially, the model showed 95.78% accuracy. But when I checked the predictions against the actual values, I found that it often labeled positive cases as negative, which isn't right. In health, spotting problems early is key. Missing a diagnosis means people won't get the treatment they need, which can make things worse. This misclassification needs fixing to make the predictions more accurate.
+I used logistic regression because the target variable had binary values. Initially, the model showed 95.78% accuracy. But when I checked the predictions against the actual values, I found that it often labeled positive cases as negative, which isn't right. In health, spotting problems early is key. Missing a diagnosis means people won't get the treatment they need, which can make things worse. This misclassification needs fixing to make the predictions more accurate.
 
 By looking at the co-efficients to identify the most important features
 - Features like 'HbA1c_level', 'blood_glucose_level', and 'age' have the largest absolute coefficients, indicating significant influence on the predicted probability of the target class.
@@ -49,6 +57,10 @@ The model performs well in identifying instances without diabetes (class 0), ach
 However, its performance in identifying instances with diabetes (class 1) is less satisfactory, with lower recall (60%) despite reasonable precision (87%).
 Overall, the model demonstrates high accuracy (96%), but there's room for improvement in correctly identifying positive cases (class 1).
 
+Tuning the model:
+
+Tried improving the false negatives and false positives by using regularization techniques.
+Implemented Lasso and Ridge regularizations. The values did not improve.
 Hence I tried another model.
 
 ### Model 2: Random Forest Classifier
@@ -85,8 +97,12 @@ Classification Report
 
 In summary, the model performs well for class 0, with high precision, recall, and F1-score, indicating accurate classification. However, for class 1, while precision is still relatively high, recall is lower, suggesting that the model struggles to capture all instances of class 1.
 
+Tuning the model:
+Tried doing a hyperparameter tuning with grid search and randomized search. The search did not produce any output maybe because of the heavy system requirements needed for them. 
+
 The dataset is highly imbalanced which is affecting the prediction, hence tried to set the class weights.
 
+Tried classweights {0:1,1:10}, {0:1,1:9.5}, {0:1.2,1:1}, {0:1,1:8} and so on.
 Adjusting the class weights did not help. In some cases class 1 performed a tiny bit better, but class 0 declined a lot. In some cases both declined. So the model without the class weights is the one good for now.
 
 #### Kajal
