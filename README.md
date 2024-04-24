@@ -109,7 +109,7 @@ Tried classweights {0:1,1:10}, {0:1,1:9.5}, {0:1.2,1:1}, {0:1,1:8} and so on.
 Adjusting the class weights did not help. In some cases class 1 performed a tiny bit better, but class 0 declined a lot. In some cases both declined. So the model without the class weights is the one good for now.
 
 ([Kajal]([JupyterNotebooks/Videogame_comparisions_Analysis_KM.ipynb](https://github.com/divyasajjan1/Project-4-Team-1/blob/main/KM_diabetes_prediction.ipynb)))
-   	 
+  ### Model 3: Neural Network
 -Dataset Preprocessing: 
 
 1.	Categorical Variable Encoding:
