@@ -109,6 +109,48 @@ Tried classweights {0:1,1:10}, {0:1,1:9.5}, {0:1.2,1:1}, {0:1,1:8} and so on.
 Adjusting the class weights did not help. In some cases class 1 performed a tiny bit better, but class 0 declined a lot. In some cases both declined. So the model without the class weights is the one good for now.
 
 ([Kajal]([JupyterNotebooks/Videogame_comparisions_Analysis_KM.ipynb](https://github.com/divyasajjan1/Project-4-Team-1/blob/main/KM_diabetes_prediction.ipynb)))
+   	 
+-Dataset Preprocessing: 
+
+1.	Categorical Variable Encoding:
+ Transform categorical variables, such as gender and smoking history, into numerical representations. This process enables us to incorporate these variables into our analyses effectively.( I 
+ USED LABEL-ENCODER TO ENCODE THE CATEGORICAL VARIABLE )
+2.	Standardization:
+  Standardize numerical data, ensuring that all variables are on a consistent scale using sklearn's StandardScaler.
+3.	Train-Test-Split:
+  Partition dataset into separate training and testing sets using sklearn's train_test_split function.
+
+-Neural Network Architecture:
+
+Model:Sequential
+
+Input Layer: Dense layer with 64 neurons, ReLU activation.
+
+Hidden Layer 1: Dense layer with 32 neurons, ReLU activation.
+
+Output Layer: Dense layer with 1 neuron, Sigmoid activation for binary classification.
+
+-Confusion Matrix:
+
+[[18284   8]
+ [  551  1157]]
+
+
+-Metrics used to Evaluate the Model:
+
+Accuracy: 0.9716
+Precision: 0.9830508474576272
+Recall: 0.6791569086651054
+F1 Score: 0.8033240997229918
+
+-Hyperparameter tuning of a neural network classifier using Keras and scikit-learn:
+
+Ultimately finding the optimal configuration for maximizing classification accuracy
+
+Best Parameters: {'dropout_rate': 0.3, 'optimizer': 'adam'}
+Best Accuracy: 0.9715874932722871
+
+
 #### Jessamyn
 Created visualization to showcase the importance of each variable within the dataset and how it correlates to the target variable, diabetes. Visualizing our data not only makes our findings more comprehensible but also offers a clearer understanding of the relationships between variables and their impact on diabetes risk. We've employed various visualization techniques to bring our analysis to life, enabling us to spot trends and patterns, compare variables and enhance interpretation.
 
