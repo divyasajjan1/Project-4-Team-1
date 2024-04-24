@@ -108,7 +108,7 @@ The dataset is highly imbalanced which is affecting the prediction, hence tried 
 Tried classweights {0:1,1:10}, {0:1,1:9.5}, {0:1.2,1:1}, {0:1,1:8} and so on.
 Adjusting the class weights did not help. In some cases class 1 performed a tiny bit better, but class 0 declined a lot. In some cases both declined. So the model without the class weights is the one good for now.
 
-#### Kajal
+#### ([Kajal] (https://github.com/divyasajjan1/Project-4-Team-1/blob/main/KM_diabetes_prediction.ipynb))
 
 #### Jessamyn
 Created visualization to showcase the importance of each variable within the dataset and how it correlates to the target variable, diabetes. Visualizing our data not only makes our findings more comprehensible but also offers a clearer understanding of the relationships between variables and their impact on diabetes risk. We've employed various visualization techniques to bring our analysis to life, enabling us to spot trends and patterns, compare variables and enhance interpretation.
