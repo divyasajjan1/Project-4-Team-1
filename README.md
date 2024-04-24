@@ -163,5 +163,17 @@ Key visualizations to expect:
 6.	Blood Glucose and HbA1c Levels: displaying the relationship between blood glucose levels, HbA1c levels, and diabetes risk.
 
 #### Donal
+To visualize the relationship between gender and diabetes status (presence or absence of diabetes), we can use a bar chart to show the distribution of diabetic and non-diabetic individuals across different genders. This visualization will help us understand how diabetes prevalence varies between different gender categories
+To create a visualization of **"Gender vs. Diabetes"** using Python and matplotlib, we can plot a bar chart to show the distribution of diabetes cases among different gender categories. This will help us understand how diabetes prevalence varies between male, female, and other genders in the dataset.
+
+Here's a step-by-step guide to creating this visualization:
+Load the Dataset:
+Start by loading your dataset that contains information about gender and diabetes status.
+Data Preparation:
+Prepare the data by grouping it based on gender and diabetes status to count the occurrences.
+Visualization:
+Use matplotlib to plot a bar chart showing the count of diabetic and non-diabetic individuals by gender.
+
+To visualize the relationship between **age and diabetes** status, we can create a box plot or violin plot to compare the distribution of ages among diabetic and non-diabetic individuals. This type of visualization helps us understand how the age varies between the two groups and identify any age-related patterns associated with diabetes.
 
 #### Ayo
