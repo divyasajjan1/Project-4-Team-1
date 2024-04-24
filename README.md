@@ -17,7 +17,7 @@ Explanation of Data columns:
 - Diabetes - is the target variable being predicted, with values of 1 indicating the presence of diabetes and 0 indicating the absence of diabetes.
 
 
-#### Divya
+#### [Divya](diabetes_prediction.ipynb)
 
 First, found the distribution of the target variable. 91.5% (91500) were 0 (No diabetes) and 8.5% (8500) were 1 (Diabetes) in the target variable. Understood that the dataset is pretty imbalanced.
 
