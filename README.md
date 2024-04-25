@@ -124,11 +124,9 @@ Adjusting the class weights did not help. In some cases class 1 performed a tiny
 
 Model:Sequential
 
-Input Layer: Dense layer with 64 neurons, ReLU activation.
-
-Hidden Layer 1: Dense layer with 32 neurons, ReLU activation.
-
-Output Layer: Dense layer with 1 neuron, Sigmoid activation for binary classification.
+* Input Layer: Dense layer with 64 neurons, ReLU activation.
+* Hidden Layer 1: Dense layer with 32 neurons, ReLU activation.
+* Output Layer: Dense layer with 1 neuron, Sigmoid activation for binary classification.
 
 -Confusion Matrix:
 
@@ -149,6 +147,16 @@ Ultimately finding the optimal configuration for maximizing classification accur
 
 Best Parameters: {'dropout_rate': 0.3, 'optimizer': 'adam'}
 Best Accuracy: 0.9715874932722871
+
+-A neural network model with a deep architecture:
+
+* Input layer: Dense layer with 128 neurons and ReLU activation function, accepting input data with the shape determined by the number of features in the training dataset.
+* Dropout layer: Applied dropout regularization with a rate of 0.2 to prevent overfitting by randomly dropping 20% of the neurons during training.
+* Hidden layers: Dense layers with 64, 32, and 16 neurons, respectively, each utilizing the ReLU activation function.
+* Output layer: Dense layer with 1 neuron and a sigmoid activation function, suitable for binary classification tasks like predicting diabetes.
+Following model construction, the model was compiled with the Adam optimizer and binary cross-entropy loss function, optimized for accuracy. Subsequently, the model was trained using the training dataset for 20 epochs with a batch size of 32, with 20% of the data reserved for validation.
+
+Test Accuracy: 0.971750020980835
 
 
 #### Jessamyn
